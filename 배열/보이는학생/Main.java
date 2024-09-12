@@ -21,7 +21,7 @@ public class Main {
 
         // 1 ~ 문자길이까지 반복
         for(int i = 1 ; i< arr.length; i++){
-            // max보다 뒷값이 더크면 카운트 및 max값 교체
+            // 자기보다 앞에있는 사람들중 가장 큰값 -> max
             if(arr[i] > max){
                 max = arr[i];
                 answer++;
