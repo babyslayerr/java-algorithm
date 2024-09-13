@@ -8,15 +8,15 @@ public class Main {
     public static char[] solution(int[] aArr, int[] bArr){
 
         // 출력용 배열 선언
-        char[] answer = new char[aArr.length];
+        String answer = "";
         // 1 : 가위, 2 : 바위, 3 : 보
 
-        for(int i = 0; i<answer.length;i++){
+        for(int i = 0; i<aArr.length;i++){
             // 가위바위보를 실행한다음 결과값을 받아온다
-            answer[i] = excuteRSP(aArr[i], bArr[i]);
+            answer += excuteRSP(aArr[i], bArr[i]);
         }
 
-        return answer;
+        return answer.toCharArray();
     }
 
     private static char excuteRSP(int a, int b) {
