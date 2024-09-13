@@ -19,32 +19,47 @@ public class Main {
         return answer.toCharArray();
     }
 
+//    private static char excuteRSP(int a, int b) {
+//
+//        // 1 : 가위 , 2 : 바위, 3 : 보
+//
+//        // 만약 a가 가위일 때 이기고 짐을 정함
+//        if(a==1 && b == 3){
+//            return 'A';
+//        } else if (a==1 && b == 2) {
+//            return 'B';
+//        }
+//        // a가 바위일 때
+//        if(a==2 && b == 1){
+//            return 'A';
+//        } else if (a==2 && b == 3) {
+//            return 'B';
+//        }
+//
+//        // a가 보일 때
+//        if(a==3 && b == 2){
+//            return 'A';
+//        } else if (a==3 && b == 1) {
+//            return 'B';
+//        }
+//
+//        // 만약 비길경우 D 출력
+//        return 'D';
+//    }
+
     private static char excuteRSP(int a, int b) {
 
         // 1 : 가위 , 2 : 바위, 3 : 보
 
-        // 만약 a가 가위일 때 이기고 짐을 정함
-        if(a==1 && b == 3){
-            return 'A';
-        } else if (a==1 && b == 2) {
-            return 'B';
-        }
-        // a가 바위일 때
-        if(a==2 && b == 1){
-            return 'A';
-        } else if (a==2 && b == 3) {
-            return 'B';
-        }
-
-        // a가 보일 때
-        if(a==3 && b == 2){
-            return 'A';
-        } else if (a==3 && b == 1) {
-            return 'B';
-        }
-
-        // 만약 비길경우 D 출력
-        return 'D';
+        // a기준
+        // 비길경우
+        if(a==b)return 'D';
+        // 승리의 경우
+        else if (a==1 && b==3) return 'A';
+        else if (a==2 && b==1) return 'A';
+        else if (a==3 && b==2) return 'A';
+        // 패배의 경우
+        else return 'B';
     }
 
 
