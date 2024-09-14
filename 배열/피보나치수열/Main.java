@@ -23,6 +23,22 @@ public class Main {
         return answer;
     }
 
+    // 배열없이 사용
+    private static void solution2(int n){
+
+        // 비교할 세변수 선언
+        int a=1,b=1,c;
+        System.out.print(a+" "+b);
+        // 반복횟수는 동일
+        for(int i =2; i < n ; i++){
+            c = a+b;
+            System.out.print(" " + c);
+            // 각각 다음값이 자기값으로
+            a = b;
+            b = c;
+        }
+
+    }
 
     public static void main(String[] args){
         // 콘솔로 입력 받을 Scanner 객체 생성
