@@ -62,9 +62,9 @@ public class Main {
                     // 봉우리 주변 인덱스
                     int nx = i + dx[k];
                     int ny = j + dy[k];
-                    // 주변중에 하나라도 봉우리보다 큰값이 있으면 봉우리가 아님
+                    // 주변중에 하나라도 봉우리보다 큰거나 같은값이 있으면 봉우리가 아님
                     // index out of error를 위한 처리
-                    if(nx >= 0 && nx<n.length && ny >=0 && ny < n.length && n[nx][ny] > n[i][j])flag = false;
+                    if(nx >= 0 && nx<n.length && ny >=0 && ny < n.length && n[nx][ny] >= n[i][j])flag = false;
                 }
                 // 봉우리면 카운팅
                 if(flag) answer++;
