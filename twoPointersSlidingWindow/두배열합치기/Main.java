@@ -1,6 +1,7 @@
 package twoPointersSlidingWindow.두배열합치기;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -41,7 +42,6 @@ public class Main {
         for(int i = 0; i<n; i++){
             a[i] = sc.nextInt();
         }
-
         // 두번째 배열 크기 m
         int m = sc.nextInt();
         int[] b = new int[m];
