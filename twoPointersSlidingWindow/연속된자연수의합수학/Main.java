@@ -1,4 +1,4 @@
-package twoPointersSlidingWindow.연속된자연수의합;
+package twoPointersSlidingWindow.연속된자연수의합수학;
 
 import java.util.Scanner;
 
@@ -8,32 +8,18 @@ public class Main {
     // 프로그래머스에서는 solution 메소드를 사용해야함
     private static int solution(int n) {
 
-        // 배열 초기화
-        int[] arr = new int[n];
-        // 2개 이상의 연속된 수로 나와야 하기 때문에 n값은 제외 또한 배열의 크기는 n/2+1
-        for(int i = 0; i<(n/2)+1; i++){
-            arr[i] = i+1;
+        // 답변 변수와, 연속된 숫자의 개수를 나타내는 변수
+        int answer=0,cnt = 1;
+        //
+        n--;
+        // 0보다 클때 까지 반복
+        while(n>0){
+            // 연속된 숫자 추가
+            cnt++;
+            // 연속된 최소숫자를 n에서 마이너스
+            n = n-cnt;
+            if(n%cnt==0)answer++;
         }
-
-        // 답 변수
-        int answer = 0, sum = 0, lt = 0;
-
-        for(int rt = 0; rt < arr.length; rt++){
-            // 합계 함수 초기화
-            sum += arr[rt];
-            if(sum == n) {
-                answer++;
-            } else{ // 합이 클경우 앞인덱스에서부터 뺀다
-                while(sum > n){
-                    sum -= arr[lt++];
-                    if(sum == n){
-                        answer++;
-                    }
-                }
-            }
-        }
-
-
 
         return answer;
     }
