@@ -15,25 +15,19 @@ public class Main {
         Stack<Integer> stack = new Stack<>();
 
         for(int pos : moves){
-            for(int i =0 ; i<board.length;i++){
-                // moves 값(열값) 중에 하나씩 0이 아닌것을 찾음(최 상단을 찾음)
-                // 최상단이면
+            for(int i=0; i< board.length;i++){
                 if(board[i][pos-1] != 0){
-                    // 값 뽑은후 해당 위치 0으로 변환
-                    int temp = board[i][pos-1];
+                    int tmp = board[i][pos-1];
                     board[i][pos-1] = 0;
-                    // stack의 최상단 값이랑 꺼낸 값이랑 동일하면 펑
-                    if(!stack.isEmpty() && stack.peek() == temp){
-                        answer += 2;
+                    if(!stack.isEmpty() && stack.peek() == tmp){
+                        answer+=2;
                         stack.pop();
                     }
-                    else stack.push(temp);
-                    // 해당 부분 종료(다음 행까지 넘어가면 안됨)
+                    else stack.push(tmp);
                     break;
                 }
             }
         }
-
 
         return answer;
     }
