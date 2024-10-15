@@ -10,7 +10,7 @@ public class Main {
     private static int solution(int[][] board, int[] moves) {
         // 결과 변수 선언
         int answer = 0;
-
+        // error
 
 
         return answer;
