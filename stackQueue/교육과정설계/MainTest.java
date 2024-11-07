@@ -26,7 +26,7 @@ public class MainTest {
         }
         // 비어있지 않으면 순서를 지키지 않은 것이므로 "NO"
         if(!queue.isEmpty()) return "NO";
-
+//
         return  answer;
     }
 
