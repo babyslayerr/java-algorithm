@@ -39,6 +39,7 @@ public class MainTest1 {
         String plan = sc.next();
 
         System.out.println(solution(order,plan));
+        //
 
     }
 }
